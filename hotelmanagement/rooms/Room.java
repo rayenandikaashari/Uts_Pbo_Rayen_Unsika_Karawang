@@ -87,7 +87,6 @@ public class Room implements Reservable {
                 customer.displayDetails();
                 isAvailable.add(roomNumber);
                 roomBookings.remove(customer);
-                System.out.println("Nomor kamar " + roomNumber + " tidak relevan.");
                 return true;
             }
         }
