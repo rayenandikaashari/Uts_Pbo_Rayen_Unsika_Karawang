@@ -87,6 +87,7 @@ public class Room implements Reservable {
                 customer.displayDetails();
                 isAvailable.add(roomNumber);
                 roomBookings.remove(customer);
+                System.out.println("Nomor kamar " + roomNumber + " tidak relevan.");
                 return true;
             }
         }
@@ -96,7 +97,7 @@ public class Room implements Reservable {
 
     public void displayAllBookings() {
         if (roomBookings.isEmpty()) {
-            System.out.println("");
+            System.out.println("Belum ada kamar yang di pesan.");
         } else {
             for (Customer customer : roomBookings) {
                 System.out.println("\nDetail Booking untuk kamar " + customer.getRoomNumber() + ":");
